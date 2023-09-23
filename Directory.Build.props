@@ -1,0 +1,20 @@
+<Project>
+  <PropertyGroup>
+    <RepositoryRootDir>$(MSBuildThisFileDirectory)</RepositoryRootDir>
+    <TargetFramework>net7.0</TargetFramework>
+    <Copyright>oli.girard@gmail.com 2023</Copyright>
+    <Product>VocabularyTrainer</Product>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <NoWarn>$(NoWarn),1573,1591,1712</NoWarn>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <RunAnalyzers>true</RunAnalyzers>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <EnablePackageVersionOverride>false</EnablePackageVersionOverride>
+  </PropertyGroup>
+</Project>

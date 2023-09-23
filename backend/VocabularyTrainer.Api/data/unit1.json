@@ -1,0 +1,161 @@
+{
+  "Id": 1,
+  "Name": "Unit 1",
+  "Translations": [
+    {
+      "Id": 1,
+      "German": "Sinn",
+      "English": "sense"
+    },
+    {
+      "Id": 2,
+      "German": "sehen",
+      "English": "see"
+    },
+    {
+      "Id": 3,
+      "German": "hören",
+      "English": "hear"
+    },
+    {
+      "Id": 4,
+      "German": "riechen",
+      "English": "smell"
+    },
+    {
+      "Id": 5,
+      "German": "schmecken",
+      "English": "taste"
+    },
+    {
+      "Id": 6,
+      "German": "berühren",
+      "English": "touch"
+    },
+    {
+      "Id": 7,
+      "German": "fühlen, spüren, sich anfühlen",
+      "English": "feel"
+    },
+    {
+      "Id": 8,
+      "German": "Jahrmarkt, Chilbi",
+      "English": "fair"
+    },
+    {
+      "Id": 9,
+      "German": "lautes Geräusch, Lärm",
+      "English": "loud noise"
+    },
+    {
+      "Id": 10,
+      "German": "mildes oder scharfes Curry",
+      "English": "mild or hot curry"
+    },
+    {
+      "Id": 11,
+      "German": "knusprige Buskuits, Kekse",
+      "English": "crunchy biscuits"
+    },
+    {
+      "Id": 12,
+      "German": "Zuckerwatte",
+      "English": "candyfloss"
+    },
+    {
+      "Id": 13,
+      "German": "Caramelbonbon",
+      "English": "toffee"
+    },
+    {
+      "Id": 14,
+      "German": "klebrige Süssigkeiten, Bonbons",
+      "English": "sticky candy"
+    },
+    {
+      "Id": 15,
+      "German": "Lebensmitteltest",
+      "English": "food test"
+    },
+    {
+      "Id": 16,
+      "German": "wicher oder harter Käse",
+      "English": "soft or hard cheese"
+    },
+    {
+      "Id": 17,
+      "German": "beissen",
+      "English": "bite"
+    },
+    {
+      "Id": 18,
+      "German": "krachen",
+      "English": "crack"
+    },
+    {
+      "Id": 19,
+      "German": "süsse oder saure Äpfel",
+      "English": "sweet or sour apples"
+    },
+    {
+      "Id": 20,
+      "German": "aromatisch, würzig",
+      "English": "aromatic"
+    },
+    {
+      "Id": 21,
+      "German": "bitter",
+      "English": "bitter"
+    },
+    {
+      "Id": 22,
+      "German": "fruchtig",
+      "English": "fruity"
+    },
+    {
+      "Id": 23,
+      "German": "frisches Gemüse",
+      "English": "fresh vegetables"
+    },
+    {
+      "Id": 24,
+      "German": "ein Stück Käse",
+      "English": "a piece of cheese"
+    },
+    {
+      "Id": 25,
+      "German": "Ich mag ..., weil ...",
+      "English": "I like ... because ..."
+    },
+    {
+      "Id": 26,
+      "German": "Ich mag ... nicht, weil ...",
+      "English": "I don't like ... because ..."
+    },
+    {
+      "Id": 27,
+      "German": "Es sieht ... aus.",
+      "English": "It looks ..."
+    },
+    {
+      "Id": 28,
+      "German": "Es tönt ...",
+      "English": "It sounds ..."
+    },
+    {
+      "Id": 29,
+      "German": "Es schmeckt zu ...",
+      "English": "It tastes too ..."
+    },
+    {
+      "Id": 30,
+      "German": "Lieblingsprodukt",
+      "English": "favourite product"
+    },
+    {
+      "Id": 31,
+      "German": "Resultat, Ergebnis",
+      "English": "result"
+    }
+  ]
+}
