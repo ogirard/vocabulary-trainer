@@ -10,11 +10,11 @@ public sealed class TranslationUnit
 
     public List<Translation> Translations { get; init; } = new();
 
-    public static async Task<TranslationUnit> LoadAsync(int id, CancellationToken cancellationToken = default)
+    public static async Task<TranslationUnit> LoadAsync(int id, string unitDataPath, CancellationToken cancellationToken = default)
     {
-        var unitDataPath = $@"data\unit{id}.json";
-
         return JsonSerializer.Deserialize<TranslationUnit>(await File.ReadAllTextAsync(unitDataPath, cancellationToken))
                ?? throw new ArgumentException($"TranslationUnit with given ID {id} could not be loaded", nameof(id));
     }
 }
+
+public record TranslationUnitInfo(int Id, string Name);
