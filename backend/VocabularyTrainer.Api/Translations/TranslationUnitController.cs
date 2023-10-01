@@ -14,11 +14,18 @@ public class TranslationUnitController : ControllerBase
     }
 
     [HttpGet("{id:int}", Name = "TranslationUnit by ID")]
-    public async Task<TranslationUnit> GetAsync(int id, CancellationToken cancellationToken)
-        => await TranslationUnit.LoadAsync(id, $@"data\unit{id}.json", cancellationToken);
+    public async Task<IActionResult> GetAsync(int id, CancellationToken cancellationToken)
+    {
+        if (!System.IO.File.Exists($@"data\unit{id}.json"))
+        {
+            return NotFound($"Could not find unit with ID={id}");
+        }
+
+        return Ok(await TranslationUnit.LoadAsync(id, $@"data\unit{id}.json", cancellationToken));
+    }
 
     [HttpGet(Name = "All TranslationUnits")]
-    public async Task<TranslationUnitInfo[]> GetAllAsync(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetAllAsync(CancellationToken cancellationToken)
     {
         var units = new List<TranslationUnit>();
         foreach (var unitDataPath in Directory.GetFiles(@"data\", "*.json"))
@@ -27,6 +34,6 @@ public class TranslationUnitController : ControllerBase
             units.Add(await TranslationUnit.LoadAsync(id, unitDataPath, cancellationToken));
         }
 
-        return units.Select(x => new TranslationUnitInfo(x.Id, x.Name)).ToArray();
+        return Ok(units.Select(x => new TranslationUnitInfo(x.Id, x.Name)).ToArray());
     }
 }
