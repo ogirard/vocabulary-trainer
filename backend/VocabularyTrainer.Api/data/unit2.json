@@ -1,0 +1,166 @@
+{
+  "Id": 2,
+  "Name": "Unit 2",
+  "Translations": [
+    {
+      "Id": 1,
+      "German": "Bäcker/-in",
+      "English": "baker"
+    },
+    {
+      "Id": 2,
+      "German": "Metzger/-in",
+      "English": "butcher"
+    },
+    {
+      "Id": 3,
+      "German": "Verkäufer/-in, Ladenangestellte/-r",
+      "English": "shop assistant"
+    },
+    {
+      "Id": 4,
+      "German": "Serviceangestellter, Serviceangestellte",
+      "English": "waiter, waitress"
+    },
+    {
+      "Id": 5,
+      "German": "Polizeibeamter/-beamtin",
+      "English": "police officer"
+    },
+    {
+      "Id": 6,
+      "German": "Strassenputzer/-in",
+      "English": "street cleaner"
+    },
+    {
+      "Id": 7,
+      "German": "Bibliothekar/-in",
+      "English": "librarian"
+    },
+    {
+      "Id": 8,
+      "German": "Arzt/Ärztin",
+      "English": "doctor"
+    },
+    {
+      "Id": 9,
+      "German": "Reporter/-in",
+      "English": "reporter"
+    },
+    {
+      "Id": 10,
+      "German": "arbeiten",
+      "English": "work"
+    },
+    {
+      "Id": 11,
+      "German": "verkaufen",
+      "English": "sell"
+    },
+    {
+      "Id": 12,
+      "German": "Job, Arbeit, Beruf",
+      "English": "job"
+    },
+    {
+      "Id": 13,
+      "German": "Bäckerei",
+      "English": "bakery"
+    },
+    {
+      "Id": 14,
+      "German": "Spital, Krankenhaus",
+      "English": "hospital"
+    },
+    {
+      "Id": 15,
+      "German": "Bibliothek",
+      "English": "library"
+    },
+    {
+      "Id": 16,
+      "German": "Kino",
+      "English": "cinema"
+    },
+    {
+      "Id": 17,
+      "German": "Laden",
+      "English": "shop"
+    },
+    {
+      "Id": 18,
+      "German": "Bahnhof",
+      "English": "train station"
+    },
+    {
+      "Id": 19,
+      "German": "Busbahnhof",
+      "English": "bus terminal"
+    },
+    {
+      "Id": 20,
+      "German": "(Land-)Karte, Stadtplan",
+      "English": "map"
+    },
+    {
+      "Id": 21,
+      "German": "Strasse",
+      "English": "street"
+    },
+    {
+      "Id": 22,
+      "German": "vor dem Gebäude",
+      "English": "in front of the building"
+    },
+    {
+      "Id": 23,
+      "German": "nach links/rechts gehen",
+      "English": "turn left/right"
+    },
+    {
+      "Id": 24,
+      "German": "geradeaus gehen",
+      "English": "walk straight on"
+    },
+    {
+      "Id": 25,
+      "German": "die Strasse überqueren",
+      "English": "cross the street"
+    },
+    {
+      "Id": 26,
+      "German": "Stadt",
+      "English": "town"
+    },
+    {
+      "Id": 27,
+      "German": "Dorf",
+      "English": "village"
+    },
+    {
+      "Id": 28,
+      "German": "Land, Landschaft",
+      "English": "countryside"
+    },
+    {
+      "Id": 29,
+      "German": "Brief",
+      "English": "letter"
+    },
+    {
+      "Id": 30,
+      "German": "leben, wohnen",
+      "English": "live"
+    },
+    {
+      "Id": 31,
+      "German": "laut, lärmend",
+      "English": "noisy"
+    },
+    {
+      "Id": 32,
+      "German": "leise, ruhig, still",
+      "English": "quiet"
+    }
+  ]
+}

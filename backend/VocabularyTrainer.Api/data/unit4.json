@@ -1,0 +1,171 @@
+{
+  "Id": 4,
+  "Name": "Unit 4",
+  "Translations": [
+    {
+      "Id": 1,
+      "German": "Eule",
+      "English": "owl"
+    },
+    {
+      "Id": 2,
+      "German": "Specht",
+      "English": "woodpecker"
+    },
+    {
+      "Id": 3,
+      "German": "Bienenstock",
+      "English": "beehive"
+    },
+    {
+      "Id": 4,
+      "German": "Schmetterling",
+      "English": "butterfly"
+    },
+    {
+      "Id": 5,
+      "German": "Schnecke",
+      "English": "snail"
+    },
+    {
+      "Id": 6,
+      "German": "Ameisenhaufen",
+      "English": "anthill"
+    },
+    {
+      "Id": 7,
+      "German": "Igel",
+      "English": "hedgehog"
+    },
+    {
+      "Id": 8,
+      "German": "Amsel",
+      "English": "blackbird"
+    },
+    {
+      "Id": 9,
+      "German": "Eichhörnchen",
+      "English": "squirrel"
+    },
+    {
+      "Id": 10,
+      "German": "Kaninchen, Hase",
+      "English": "rabbit"
+    },
+    {
+      "Id": 11,
+      "German": "Maus",
+      "English": "mouse (pl. mice)"
+    },
+    {
+      "Id": 12,
+      "German": "Fuchs",
+      "English": "fox (pl. foxes)"
+    },
+    {
+      "Id": 13,
+      "German": "Hirsch, Reh",
+      "English": "deer (pl. deer)"
+    },
+    {
+      "Id": 14,
+      "German": "Spinnennetz",
+      "English": "spiderweb"
+    },
+    {
+      "Id": 15,
+      "German": "ein Haufen (Blätter)",
+      "English": "a pile of (leaves)"
+    },
+    {
+      "Id": 16,
+      "German": "Ast, Zweig",
+      "English": "branch"
+    },
+    {
+      "Id": 17,
+      "German": "Baumstamm (eines gefällten Baums)",
+      "English": "log"
+    },
+    {
+      "Id": 18,
+      "German": "Baumstamm (eines lebenden Baums)",
+      "English": "tree trunk"
+    },
+    {
+      "Id": 19,
+      "German": "Wurzel",
+      "English": "root"
+    },
+    {
+      "Id": 20,
+      "German": "Zweig, Stock",
+      "English": "stick"
+    },
+    {
+      "Id": 21,
+      "German": "Brett",
+      "English": "board"
+    },
+    {
+      "Id": 22,
+      "German": "Wald",
+      "English": "forest"
+    },
+    {
+      "Id": 23,
+      "German": "Abfall, Müll",
+      "English": "rubbish"
+    },
+    {
+      "Id": 24,
+      "German": "fangen",
+      "English": "catch"
+    },
+    {
+      "Id": 25,
+      "German": "fliegen",
+      "English": "fly"
+    },
+    {
+      "Id": 26,
+      "German": "jagen",
+      "English": "hunt"
+    },
+    {
+      "Id": 27,
+      "German": "wach sein",
+      "English": "be awake"
+    },
+    {
+      "Id": 28,
+      "German": "schneiden",
+      "English": "cut"
+    },
+    {
+      "Id": 29,
+      "German": "klettern",
+      "English": "climb"
+    },
+    {
+      "Id": 30,
+      "German": "nageln",
+      "English": "nail"
+    },
+    {
+      "Id": 31,
+      "German": "Tiere nicht füttern! Tiere füttern verboten!",
+      "English": "Don't feed the animals!"
+    },
+    {
+      "Id": 32,
+      "German": "in der Nacht",
+      "English": "at night"
+    },
+    {
+      "Id": 33,
+      "German": "am Tag, tagsüber, während des Tages",
+      "English": "during the day"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "Id": 3,
+  "Name": "Unit 3",
+  "Translations": [
+    {
+      "Id": 1,
+      "German": "ein gelbes Quadrat",
+      "English": "a yellow square"
+    },
+    {
+      "Id": 2,
+      "German": "ein rotes Dreieck",
+      "English": "a red triangle"
+    },
+    {
+      "Id": 3,
+      "German": "ein grüner Kreis",
+      "English": "a grenn circle"
+    },
+    {
+      "Id": 4,
+      "German": "ein blaues Rechteck",
+      "English": "a blue rectangle"
+    },
+    {
+      "Id": 5,
+      "German": "ein oranger Streifen",
+      "English": "an orange stripe"
+    },
+    {
+      "Id": 6,
+      "German": "eine violette Form",
+      "English": "a purple shape"
+    },
+    {
+      "Id": 7,
+      "German": "braun",
+      "English": "brown"
+    },
+    {
+      "Id": 8,
+      "German": "grau",
+      "English": "grey"
+    },
+    {
+      "Id": 9,
+      "German": "Primär-/Sekundärfarben, Grund-/Mischfarben",
+      "English": "primary/secondary colours"
+    },
+    {
+      "Id": 10,
+      "German": "rund",
+      "English": "round"
+    },
+    {
+      "Id": 11,
+      "German": "in der Mitte",
+      "English": "in the middle"
+    },
+    {
+      "Id": 12,
+      "German": "auf der linken/rechten Seite, links/rechts",
+      "English": "on the left/right side"
+    },
+    {
+      "Id": 13,
+      "German": "am oberen Ende, oben",
+      "English": "at the top"
+    },
+    {
+      "Id": 14,
+      "German": "am unteren Ende, unten",
+      "English": "at the bottom"
+    },
+    {
+      "Id": 15,
+      "German": "klein, kleiner",
+      "English": "small, smaller"
+    },
+    {
+      "Id": 16,
+      "German": "gross, grösser",
+      "English": "big, bigger"
+    },
+    {
+      "Id": 17,
+      "German": "ein berühmter Künstler, eine berühmte Künstlerin",
+      "English": "a famous artis"
+    },
+    {
+      "Id": 18,
+      "German": "ein farbiges/buntes Bild",
+      "English": "a colourful picture"
+    },
+    {
+      "Id": 19,
+      "German": "eine Schwarz-Weiss-Zeichnung",
+      "English": "a black and white drawing"
+    },
+    {
+      "Id": 20,
+      "German": "Es gibt ...",
+      "English": "There is/are ..."
+    },
+    {
+      "Id": 21,
+      "German": "Es ist ...",
+      "English": "It is ..."
+    },
+    {
+      "Id": 22,
+      "German": "Man kann ... sehen.",
+      "English": "You can see ..."
+    },
+    {
+      "Id": 23,
+      "German": "Dieses Bild macht, dass ich mich ... fühle",
+      "English": "This picture makes me feel ..."
+    },
+    {
+      "Id": 24,
+      "German": "mein Lieblingsgedicht",
+      "English": "my favourite poem"
+    },
+    {
+      "Id": 25,
+      "German": "Ausstellung",
+      "English": "exhibition"
+    },
+    {
+      "Id": 26,
+      "German": "ins Museum gehen",
+      "English": "go to the museum"
+    },
+    {
+      "Id": 27,
+      "German": "Titel",
+      "English": "title"
+    },
+    {
+      "Id": 28,
+      "German": "bedeuten, meinen (sagen wollen)",
+      "English": "mean"
+    },
+    {
+      "Id": 29,
+      "German": "beschreiben",
+      "English": "describe"
+    },
+    {
+      "Id": 30,
+      "German": "färben, ausmalen",
+      "English": "colour"
+    }
+  ]
+}

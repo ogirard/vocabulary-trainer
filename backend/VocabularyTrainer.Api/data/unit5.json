@@ -1,0 +1,171 @@
+{
+  "Id": 5,
+  "Name": "Unit 5",
+  "Translations": [
+    {
+      "Id": 1,
+      "German": "(zu Fuss) gehen",
+      "English": "walk"
+    },
+    {
+      "Id": 2,
+      "German": "Velo fahren",
+      "English": "ride a bicycle/bike"
+    },
+    {
+      "Id": 3,
+      "German": "mit dem Ballon fliegen",
+      "English": "fly by balloon"
+    },
+    {
+      "Id": 4,
+      "German": "mit dem Auto fahren",
+      "English": "drive by car"
+    },
+    {
+      "Id": 5,
+      "German": "mit dem Zug fahren",
+      "English": "go by train"
+    },
+    {
+      "Id": 6,
+      "German": "mit dem Flugzeug reisen",
+      "English": "travel by plane"
+    },
+    {
+      "Id": 7,
+      "German": "mit dem Boot segeln",
+      "English": "sail by boat"
+    },
+    {
+      "Id": 8,
+      "German": "Motorrad",
+      "English": "motorbike"
+    },
+    {
+      "Id": 9,
+      "German": "Seilbahn, Kabelstrassenbahn",
+      "English": "cable car"
+    },
+    {
+      "Id": 10,
+      "German": "Schiff",
+      "English": "ship"
+    },
+    {
+      "Id": 11,
+      "German": "Lastwagen",
+      "English": "lorry"
+    },
+    {
+      "Id": 12,
+      "German": "Rakete",
+      "English": "rocket"
+    },
+    {
+      "Id": 13,
+      "German": "Verkehrsmittel",
+      "English": "means of transport"
+    },
+    {
+      "Id": 14,
+      "German": "Strasse",
+      "English": "road"
+    },
+    {
+      "Id": 15,
+      "German": "Weg, Pfad",
+      "English": "path"
+    },
+    {
+      "Id": 16,
+      "German": "über den Berg",
+      "English": "over the mountain"
+    },
+    {
+      "Id": 17,
+      "German": "am See vorbei",
+      "English": "past the lake"
+    },
+    {
+      "Id": 18,
+      "German": "Meer, Ozean",
+      "English": "sea, ocean"
+    },
+    {
+      "Id": 19,
+      "German": "an den Strand",
+      "English": "to the beach"
+    },
+    {
+      "Id": 20,
+      "German": "den Hügel hinauf/hinunter",
+      "English": "up/down the hill"
+    },
+    {
+      "Id": 21,
+      "German": "an der Stadt vorbei",
+      "English": "past the town"
+    },
+    {
+      "Id": 22,
+      "German": "am Fluss entlang",
+      "English": "along the river"
+    },
+    {
+      "Id": 23,
+      "German": "klein, kleiner",
+      "English": "small, smaller"
+    },
+    {
+      "Id": 24,
+      "German": "gross, grösser",
+      "English": "big, bigger"
+    },
+    {
+      "Id": 25,
+      "German": "langsam, langsamer",
+      "English": "slow, slower"
+    },
+    {
+      "Id": 26,
+      "German": "schnell, schneller",
+      "English": "fast, faster"
+    },
+    {
+      "Id": 27,
+      "German": "nah, näher",
+      "English": "near, nearer"
+    },
+    {
+      "Id": 28,
+      "German": "weit, weiter",
+      "English": "far, farther"
+    },
+    {
+      "Id": 29,
+      "German": "kurz, kürzer",
+      "English": "short, shorter"
+    },
+    {
+      "Id": 30,
+      "German": "lang, länger",
+      "English": "long, longer"
+    },
+    {
+      "Id": 31,
+      "German": "gut, besser",
+      "English": "good, better"
+    },
+    {
+      "Id": 32,
+      "German": "mehr Passagiere/Fahrgäste als",
+      "English": "more passengers than"
+    },
+    {
+      "Id": 33,
+      "German": "Geschwindigkeit",
+      "English": "speed"
+    }
+  ]
+}
