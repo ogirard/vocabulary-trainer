@@ -5,7 +5,7 @@ import AnswerButton, {
   AnswerButtonProps,
   AnswerClickedEvent,
 } from "./answer-button";
-import { NextTranslationLoadedEvent } from "./random-translation-quiz";
+import { NextQuestionLoadedEvent } from "./random-translation-quiz";
 
 interface AskTranslationProps {
   germanText: string;
@@ -30,25 +30,27 @@ const AskTranslation = ({
     setAnswer(answerClickedEvent.detail);
   });
 
-  document.addEventListener("onNextTranslationLoaded", (event: Event) => {
-    const nextTranslationLoadedEvent = event as NextTranslationLoadedEvent;
+  document.addEventListener("onNextQuestionLoaded", (event: Event) => {
+    const nextQuestionLoadedEvent = event as NextQuestionLoadedEvent;
     setAnswer(null);
   });
 
   return (
     <>
-      <div className="font-bold text-3xl text-center">
-        <span className="inline-flex items-center rounded-md bg-gray-50 px-2 py-1 text-xs font-medium text-gray-600 ring-1 ring-inset ring-gray-500/10">
-          {currentNumber}/{totalNumber}
+      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+        <div
+          className="bg-blue-600 h-2.5 rounded-full"
+          style={{ width: `${(currentNumber * 100) / totalNumber}%` }}
+        ></div>
+        <span className="text-sm text-gray-500">
+          {currentNumber + 1}/{totalNumber}
         </span>
-        <br />
-        <br />
-        {germanText}
       </div>
+      <div className="font-bold text-3xl text-center">{germanText}</div>
       <div className="grid grid-cols-2 grid-rows-2 gap-4">
         {answers.map((x) => (
           <AnswerButton
-            key={x.answerId}
+            key={`${currentNumber}-${x.answerId}`}
             answerId={x.answerId}
             answerText={x.answerText}
             isCorrect={x.isCorrect}
@@ -56,18 +58,20 @@ const AskTranslation = ({
           />
         ))}
       </div>
-      {answer && answer.isCorrect && (
-        <div className="text-green-800 font-semibold text-xl font-serif">
-          Antwort <span className="bg-slate-300">{answer.answerText}</span> isch
-          voll KORRäKT! :-)
-        </div>
-      )}
-      {answer && !answer.isCorrect && (
-        <div className="text-red-800 font-semibold text-xl font-serif">
-          Antwort <span className="bg-slate-300">{answer.answerText}</span> isch
-          völlig FAALSCH, WRONG, komplett NöD RICHTIG! :-X
-        </div>
-      )}
+      <div style={{ minHeight: "100px" }}>
+        {answer && answer.isCorrect && (
+          <div className="text-green-800 font-semibold text-xl font-serif">
+            Antwort <span className="bg-slate-300">{answer.answerText}</span>{" "}
+            isch voll KORRäKT! :-)
+          </div>
+        )}
+        {answer && !answer.isCorrect && (
+          <div className="text-red-800 font-semibold text-xl font-serif">
+            Antwort <span className="bg-slate-300">{answer.answerText}</span>{" "}
+            isch völlig FAALSCH, WRONG, komplett NöD RICHTIG! :-X
+          </div>
+        )}
+      </div>
     </>
   );
 };

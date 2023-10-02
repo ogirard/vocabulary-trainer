@@ -3,8 +3,8 @@
 import { shuffle } from "lodash";
 import AskTranslation from "./ask-translation";
 import { AnswerButtonProps, AnswerClickedEvent } from "./answer-button";
-import { useState } from "react";
-import Image from "next/image";
+import { useEffect, useState } from "react";
+import ResultsOverview from "./results-overview";
 
 export interface Translation {
   id: number;
@@ -16,21 +16,59 @@ interface RandomTranslationQuizProps {
   translations: Translation[];
 }
 
-export interface NextTranslationLoadedEvent extends CustomEvent {
+export interface NextQuestionLoadedEvent extends CustomEvent {
   detail: {
-    translation: Translation;
+    question: Question;
   };
 }
 
-const RandomTranslationQuiz = (props: RandomTranslationQuizProps) => {
-  const [currentTranslation, setCurrentTranslation] = useState(0);
+export interface Question {
+  question: string;
+  answers: AnswerButtonProps[];
+}
+
+const RandomTranslationQuiz = ({
+  translations,
+}: RandomTranslationQuizProps) => {
+  const [currentTranslation, setCurrentTranslation] = useState(-1);
+  const [currentQuestion, setCurrentQuestion] = useState({} as Question);
+
+  const moveToNextTranslation = () => {
+    setCurrentTranslation(currentTranslation + 1);
+    if (currentTranslation >= translations.length) {
+      return;
+    }
+
+    const translationsCopy = translations.slice();
+    const current = translationsCopy.splice(currentTranslation, 1)[0];
+    const randomTranslations = shuffle(translationsCopy).slice(0, 3);
+
+    const answers: AnswerButtonProps[] = [
+      {
+        isCorrect: true,
+        answerId: current.id,
+        answerText: current.english,
+      },
+      ...randomTranslations.map(
+        (x) =>
+          ({
+            isCorrect: false,
+            answerId: x.id,
+            answerText: x.english,
+          } as AnswerButtonProps)
+      ),
+    ];
+
+    setCurrentQuestion({ question: current.german, answers: shuffle(answers) });
+    const nextQuestionLoadedEvent = new CustomEvent("onNextQuestionLoaded", {
+      detail: { question: currentQuestion },
+    } as NextQuestionLoadedEvent);
+    document.dispatchEvent(nextQuestionLoadedEvent);
+  };
+
   const [answerStats, setAnswerStats] = useState(
     {} as { correctCount: number; wrongCount: number }
   );
-
-  const translations = props.translations.slice();
-  const current = translations.splice(currentTranslation, 1)[0];
-  const randomTranslations = shuffle(translations).slice(0, 3);
 
   document.addEventListener("onAnswerClicked", (event: Event) => {
     const answerClickedEvent = event as AnswerClickedEvent;
@@ -43,80 +81,37 @@ const RandomTranslationQuiz = (props: RandomTranslationQuizProps) => {
     setAnswerStats(stats);
   });
 
-  const answers: AnswerButtonProps[] = [
-    {
-      isCorrect: true,
-      answerId: current.id,
-      answerText: current.english,
-    },
-    ...randomTranslations.map(
-      (x) =>
-        ({
-          isCorrect: false,
-          answerId: x.id,
-          answerText: x.english,
-        } as AnswerButtonProps)
-    ),
-  ];
+  useEffect(() => moveToNextTranslation(), []);
 
   return (
     <>
-      <AskTranslation
-        answers={shuffle(answers)}
-        currentNumber={currentTranslation + 1}
-        totalNumber={props.translations.length}
-        germanText={current.german}
-      ></AskTranslation>
-      <br />
-      <div className="flex-wrap inline-flex">
-        <div>
-          <Image
-            className="mr-6"
-            src="/correct.svg"
-            alt="Correct Answers"
-            width={40}
-            height={25}
-            priority
-          ></Image>
-          <div className="text-green-800 font-semibold text-xl font-serif text-center">
-            {answerStats.correctCount}
-          </div>
-        </div>
+      {currentTranslation < translations.length && currentQuestion.answers && (
+        <>
+          <AskTranslation
+            answers={currentQuestion.answers}
+            currentNumber={currentTranslation}
+            totalNumber={translations.length}
+            germanText={currentQuestion.question}
+          ></AskTranslation>
 
-        <div>
-          <Image
-            src="/wrong.svg"
-            alt="Wrong Answers"
-            width={40}
-            height={25}
-            priority
-          ></Image>
-          <div className="text-red-800 font-semibold text-xl font-serif text-center">
-            {answerStats.wrongCount}
-          </div>
-        </div>
-      </div>
-
-      {currentTranslation < translations.length && (
-        <button
-          className="bg-blue-200 p-8"
-          onClick={() => {
-            if (currentTranslation == translations.length - 1) {
-              return;
-            }
-
-            setCurrentTranslation(currentTranslation + 1);
-            const nextTranslationLoadedEvent = new CustomEvent(
-              "onNextTranslationLoaded",
-              {
-                detail: { translation: translations[currentTranslation + 1] },
-              } as NextTranslationLoadedEvent
-            );
-            document.dispatchEvent(nextTranslationLoadedEvent);
-          }}
-        >
-          NEXT
-        </button>
+          <button
+            className="bg-blue-200 p-8 px-16 min-w-full rounded-lg"
+            onClick={() => moveToNextTranslation()}
+          >
+            NäCHSCHTI FROG!
+          </button>
+        </>
+      )}
+      {currentTranslation >= translations.length && (
+        <ResultsOverview
+          wrongAnswerCount={answerStats.wrongCount}
+          correctAnswerCount={answerStats.correctCount}
+          noAnswerCount={
+            translations.length -
+            (answerStats?.correctCount ?? 0) -
+            (answerStats?.wrongCount ?? 0)
+          }
+        ></ResultsOverview>
       )}
     </>
   );

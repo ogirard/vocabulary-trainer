@@ -1,6 +1,6 @@
 "use client";
 
-import { MouseEvent, useState } from "react";
+import { MouseEvent } from "react";
 
 export interface AnswerButtonProps {
   answerId: number;
