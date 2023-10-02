@@ -1,3 +1,4 @@
+import { shuffle } from "lodash";
 import RandomTranslationQuiz from "./random-translation-quiz";
 
 async function getData() {
@@ -18,7 +19,7 @@ export default async function Home() {
         YANIS&apos; VOCI TRAINER
       </h1>
       <RandomTranslationQuiz
-        translations={data.translations}
+        translations={shuffle(data.translations)}
       ></RandomTranslationQuiz>
       <div className="text-sm text-gray-400">
         {data.name} loaded with {data.translations.length} translations...
