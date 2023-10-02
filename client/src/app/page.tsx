@@ -18,6 +18,7 @@ export default async function Home() {
       <h1 className="text-6xl font-bold text-center text-blue-950">
         YANIS&apos; VOCI TRAINER
       </h1>
+      <h3 className="text-3xl text-slate-600">UNIT 1</h3>
       <RandomTranslationQuiz
         translations={shuffle(data.translations)}
       ></RandomTranslationQuiz>

@@ -39,7 +39,7 @@ const AnswerButton = (props: AnswerButtonProps) => {
   return (
     <button
       disabled={props.isAnswered}
-      className="bg-blue-400 p-10 rounded-xl text-xl"
+      className="bg-blue-400 p-10 rounded-xl text-xl font-bold"
       style={{ minWidth: "250px" }}
       onClick={handleClick}
     >

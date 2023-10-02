@@ -95,7 +95,7 @@ const RandomTranslationQuiz = ({
           ></AskTranslation>
 
           <button
-            className="bg-blue-200 p-8 px-16 min-w-full rounded-lg"
+            className="bg-blue-200 p-8 px-16 min-w-full rounded-lg font-bold text-blue-900"
             onClick={() => moveToNextTranslation()}
           >
             NäCHSCHTI FROG!
