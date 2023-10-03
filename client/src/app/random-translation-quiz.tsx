@@ -72,11 +72,10 @@ const RandomTranslationQuiz = ({
   } as { correctCount: number; wrongCount: number });
 
   useEffect(() => {
-   
     moveToNextTranslation();
   }, []);
 
-  document?.addEventListener("onAnswerClicked", (event: Event) => {
+  document.addEventListener("onAnswerClicked", (event: Event) => {
     const answerClickedEvent = event as AnswerClickedEvent;
     const stats = { ...answerStats };
     if (answerClickedEvent.detail.isCorrect) {
