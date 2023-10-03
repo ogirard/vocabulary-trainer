@@ -66,9 +66,10 @@ const RandomTranslationQuiz = ({
     document.dispatchEvent(nextQuestionLoadedEvent);
   };
 
-  const [answerStats, setAnswerStats] = useState(
-    {} as { correctCount: number; wrongCount: number }
-  );
+  const [answerStats, setAnswerStats] = useState({
+    correctCount: 0,
+    wrongCount: 0,
+  } as { correctCount: number; wrongCount: number });
 
   document.addEventListener("onAnswerClicked", (event: Event) => {
     const answerClickedEvent = event as AnswerClickedEvent;
