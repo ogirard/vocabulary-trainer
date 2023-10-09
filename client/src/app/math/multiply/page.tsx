@@ -1,5 +1,7 @@
 import { shuffle } from "lodash";
-import MathRandomMultiplicationQuiz, { MathMultiplyQuestion } from "./math-random-multiplication-quiz";
+import MathRandomMultiplicationQuiz, {
+  MathMultiplyQuestion,
+} from "./math-random-multiplication-quiz";
 
 export default async function Multiply() {
   const multiplyQuestions: MathMultiplyQuestion[] = [];
@@ -26,9 +28,8 @@ export default async function Multiply() {
         multiplyQuestions={shuffle(multiplyQuestions.concat(multiplyQuestions))}
       ></MathRandomMultiplicationQuiz>
       <div className="text-sm text-gray-400">
-        {multiplyQuestions.length} Multiplikationä si glade :-)
+        {multiplyQuestions.length * 2} Multiplikationä si glade :-)
       </div>
-
     </main>
   );
 }

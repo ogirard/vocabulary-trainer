@@ -79,7 +79,7 @@ const MathRandomMultiplicationQuiz = ({
     moveToNextTranslation();
   }, []);
 
-  document.addEventListener("onAnswerClicked", (event: Event) => {
+  document.addEventListener("onMathAnswerClicked", (event: Event) => {
     const answerClickedEvent = event as MathAnswerClickedEvent;
     const stats = { ...answerStats };
     if (answerClickedEvent.detail.isCorrect) {
