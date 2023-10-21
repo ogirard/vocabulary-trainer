@@ -1,11 +1,11 @@
-import MultipleChoiceQuiz from "@/components/multiple-choice/multiple-choice-quiz";
-import { UnitData } from "./model";
-import { MultipleChoiceQuestion } from "@/components/multiple-choice/multiple-choice-model";
-import { shuffle } from "lodash";
-import Link from "next/link";
+import MultipleChoiceQuiz from '@/components/multiple-choice/multiple-choice-quiz';
+import { UnitData } from './model';
+import { MultipleChoiceQuestion } from '@/components/multiple-choice/multiple-choice-model';
+import { shuffle } from 'lodash';
+import Link from 'next/link';
 
 async function getData(unitId: number): Promise<UnitData> {
-  const res = await fetch("http://localhost:5112/TranslationUnit/" + unitId);
+  const res = await fetch('http://localhost:5112/TranslationUnit/' + unitId);
 
   if (!res.ok) {
     throw new Error(`Could not fetch translation unit with ID ${unitId}!`);
@@ -58,19 +58,19 @@ export default async function VociPage({
   return (
     <>
       <Link
-        className="absolute left-5 top-5 dark:text-blue-200 text-blue-600"
-        href="/"
+        className='absolute left-5 top-5 text-blue-600 dark:text-blue-200'
+        href='/'
       >
         ❮ Zrügg zur Startsiitä
       </Link>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <h1 className="text-6xl font-bold text-center text-blue-700 font-serif">
+      <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+        <h1 className='text-center font-serif text-6xl font-bold text-blue-700'>
           VOCI {unitData.name}
         </h1>
 
         <MultipleChoiceQuiz multipleChoiceQuestions={multipleChoiceQuestions} />
 
-        <div className="font-serif text-gray-400">
+        <div className='font-serif text-gray-400'>
           {unitData.translations.length} Übersetzigä gladäää ...
         </div>
       </main>

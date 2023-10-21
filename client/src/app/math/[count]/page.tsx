@@ -1,7 +1,7 @@
-import { MultipleChoiceQuestion } from "@/components/multiple-choice/multiple-choice-model";
-import MultipleChoiceQuiz from "@/components/multiple-choice/multiple-choice-quiz";
-import { shuffle } from "lodash";
-import Link from "next/link";
+import { MultipleChoiceQuestion } from '@/components/multiple-choice/multiple-choice-model';
+import MultipleChoiceQuiz from '@/components/multiple-choice/multiple-choice-quiz';
+import { shuffle } from 'lodash';
+import Link from 'next/link';
 
 function getRandom(exclude: number[], max = 20) {
   let result = Math.floor(Math.random() * max) + 1;
@@ -64,19 +64,19 @@ export default function MathMultipleChoicePage({
   return (
     <>
       <Link
-        className="absolute left-5 top-5 dark:text-blue-200 text-blue-600"
-        href="/"
+        className='absolute left-5 top-5 text-blue-600 dark:text-blue-200'
+        href='/'
       >
         ❮ Zrügg zur Startsiitä
       </Link>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        <h1 className="text-6xl font-bold text-center text-blue-700 font-serif">
-          MATH 1x1 - {count > 9000 ? "Ä HUFE" : `${count} MAL`}
+      <main className='flex min-h-screen flex-col items-center justify-between p-24'>
+        <h1 className='text-center font-serif text-6xl font-bold text-blue-700'>
+          MATH 1x1 - {count > 9000 ? 'Ä HUFE' : `${count} MAL`}
         </h1>
         <MultipleChoiceQuiz multipleChoiceQuestions={multipleChoiceQuestions} />
 
-        <div className="font-serif text-gray-400">
-          {count > 9000 ? "Ganz vieli" : `${count}`} Rächnigä si parat ...
+        <div className='font-serif text-gray-400'>
+          {count > 9000 ? 'Ganz vieli' : `${count}`} Rächnigä si parat ...
         </div>
       </main>
     </>

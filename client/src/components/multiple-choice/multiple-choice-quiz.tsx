@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import MultipleChoiceQuestionPanel from "./multiple-choice-question-panel";
-import MultipleChoiceResults from "./multiple-choice-results";
-import { useEffect, useState } from "react";
+import MultipleChoiceQuestionPanel from './multiple-choice-question-panel';
+import MultipleChoiceResults from './multiple-choice-results';
+import { useEffect, useState } from 'react';
 
 import {
   MultipleChoiceAnswerClickedEvent,
   MultipleChoiceQuestion,
   NextMultipleChoiceQuestionLoadedEvent,
-} from "./multiple-choice-model";
-import { useHotkey } from "@/hooks/useHotkey";
+} from './multiple-choice-model';
+import { useHotkey } from '@/hooks/useHotkey';
 
 export interface MathMultiplyQuestion {
   id: number;
@@ -61,7 +61,7 @@ const MultipleChoiceQuiz = ({
     setAnswerStats(stats);
   });
 
-  useHotkey(["Space", "NumpadEnter", "Enter"], () => loadNextQuestion());
+  useHotkey(['Space', 'NumpadEnter', 'Enter'], () => loadNextQuestion());
 
   return (
     <>
@@ -74,7 +74,7 @@ const MultipleChoiceQuiz = ({
           ></MultipleChoiceQuestionPanel>
 
           <button
-            className="bg-blue-200 p-8 px-16 min-w-full rounded-lg font-bold text-blue-900"
+            className='min-w-full rounded-lg bg-blue-200 p-8 px-16 font-bold text-blue-900'
             onClick={() => loadNextQuestion()}
           >
             NäCHSCHTS FRöGLI!

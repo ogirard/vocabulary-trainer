@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
@@ -8,10 +8,10 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      'sans': ['"Roboto Slab"', 'sans-serif'],
-      'serif': ['"Roboto Slab"', 'serif']
-    }
+      sans: ['"Roboto"', 'sans-serif'],
+      serif: ['"Roboto Slab"', 'serif'],
+    },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
