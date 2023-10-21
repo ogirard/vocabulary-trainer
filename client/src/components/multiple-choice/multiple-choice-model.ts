@@ -1,36 +1,15 @@
 
 
 export interface MultipleChoiceQuestion {
+    questionId: number;
     questionText: string;
     answers: MultipleChoiceAnswer[];
 }
 
 export interface MultipleChoiceAnswer {
-    answerId: number;
+    answerId: string;
     answerText: string;
     isCorrect: boolean;
-}
-
-export class MultipleChoiceQuestionModel implements MultipleChoiceQuestion {
-    questionText: string;
-    answers: MultipleChoiceAnswer[];
-
-    constructor(questionText: string, answers: MultipleChoiceAnswer[]) {
-        this.questionText = questionText;
-        this.answers = answers;
-    }
-}
-
-export class MultipleChoiceAnswerModel implements MultipleChoiceAnswer {
-    answerId: number;
-    answerText: string;
-    isCorrect: boolean;
-
-    constructor(answerId: number, answerText: string, isCorrect: boolean) {
-        this.answerId = answerId;
-        this.answerText = answerText;
-        this.isCorrect = isCorrect;
-    }
 }
 
 export class MultipleChoiceAnswerClickedEvent {

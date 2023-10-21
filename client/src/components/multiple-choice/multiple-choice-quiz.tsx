@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import MultipleChoiceResults from "./multiple-choice-results";
 import MultipleChoiceQuestionPanel from "./multiple-choice-question-panel";
+import MultipleChoiceResults from "./multiple-choice-results";
+import { useEffect, useState } from "react";
+
 import {
   MultipleChoiceAnswerClickedEvent,
   MultipleChoiceQuestion,
@@ -74,7 +75,7 @@ const MultipleChoiceQuiz = ({
             className="bg-blue-200 p-8 px-16 min-w-full rounded-lg font-bold text-blue-900"
             onClick={() => loadNextQuestion()}
           >
-            NäCHSCHTI RäCHNIG!
+            NäCHSCHTS FRöGLI!
           </button>
         </>
       )}
