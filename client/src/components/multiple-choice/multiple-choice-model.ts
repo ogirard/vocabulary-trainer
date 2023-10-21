@@ -1,4 +1,4 @@
-import { addGlobalEventListener, configureDocumentIfLoaded, dispatchGlobalEvent, isBrowser } from "../util";
+import { addGlobalEventListener, dispatchGlobalEvent } from "../../lib/util";
 
 
 export interface MultipleChoiceQuestion {

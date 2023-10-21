@@ -9,6 +9,7 @@ import {
   MultipleChoiceQuestion,
   NextMultipleChoiceQuestionLoadedEvent,
 } from "./multiple-choice-model";
+import { useHotkey } from "@/hooks/useHotkey";
 
 export interface MathMultiplyQuestion {
   id: number;
@@ -42,8 +43,6 @@ const MultipleChoiceQuiz = ({
       return;
     }
     setCurrentQuestion(multipleChoiceQuestions[currentIndex]);
-    console.log(currentIndex);
-    console.log(JSON.stringify(currentQuestion));
     NextMultipleChoiceQuestionLoadedEvent.publish(currentQuestion);
   };
 
@@ -61,6 +60,8 @@ const MultipleChoiceQuiz = ({
 
     setAnswerStats(stats);
   });
+
+  useHotkey(["Space", "NumpadEnter", "Enter"], () => loadNextQuestion());
 
   return (
     <>

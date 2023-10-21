@@ -2,6 +2,7 @@ import MultipleChoiceQuiz from "@/components/multiple-choice/multiple-choice-qui
 import { UnitData } from "./model";
 import { MultipleChoiceQuestion } from "@/components/multiple-choice/multiple-choice-model";
 import { shuffle } from "lodash";
+import Link from "next/link";
 
 async function getData(unitId: number): Promise<UnitData> {
   const res = await fetch("http://localhost:5112/TranslationUnit/" + unitId);
@@ -22,21 +23,23 @@ function getMultipleChoiceQuestions(
     const wrongAnswers = shuffle(
       unitData.translations.filter((x) => x !== translation).slice()
     ).slice(0, 3);
+    const answers = [
+      {
+        answerId: `${translation.id}-1`,
+        answerText: translation.english,
+        isCorrect: true,
+      },
+      ...wrongAnswers.map((x, i) => ({
+        answerId: `${translation.id}-${i + 2}`,
+        answerText: x.english,
+        isCorrect: false,
+      })),
+    ];
+
     multipleChoiceQuestions.push({
       questionId: translation.id,
       questionText: translation.german,
-      answers: shuffle([
-        {
-          answerId: `${translation.id}-1`,
-          answerText: translation.english,
-          isCorrect: true,
-        },
-        ...wrongAnswers.map((x, i) => ({
-          answerId: `${translation.id}-${i + 2}`,
-          answerText: x.english,
-          isCorrect: false,
-        })),
-      ]),
+      answers: shuffle(answers),
     });
   }
 
@@ -53,16 +56,21 @@ export default async function VociPage({
   const multipleChoiceQuestions = getMultipleChoiceQuestions(unitData);
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1 className="text-6xl font-bold text-center text-blue-700 font-serif">
-        VOCI {unitData.name}
-      </h1>
+    <>
+      <Link className="absolute left-5 top-5 text-blue-200" href="/">
+        ❮ Zrügg zur Startsiitä
+      </Link>
+      <main className="flex min-h-screen flex-col items-center justify-between p-24">
+        <h1 className="text-6xl font-bold text-center text-blue-700 font-serif">
+          VOCI {unitData.name}
+        </h1>
 
-      <MultipleChoiceQuiz multipleChoiceQuestions={multipleChoiceQuestions} />
+        <MultipleChoiceQuiz multipleChoiceQuestions={multipleChoiceQuestions} />
 
-      <div className="font-serif text-gray-400">
-        {unitData.translations.length} Übersetzigä gladäää ...
-      </div>
-    </main>
+        <div className="font-serif text-gray-400">
+          {unitData.translations.length} Übersetzigä gladäää ...
+        </div>
+      </main>
+    </>
   );
 }

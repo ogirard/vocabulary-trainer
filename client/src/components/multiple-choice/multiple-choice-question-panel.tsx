@@ -47,10 +47,11 @@ const MultipleChoiceQuestionPanel = ({
         {question.questionText}
       </div>
       <div className="grid grid-cols-2 grid-rows-2 gap-4">
-        {question.answers.map((x) => (
+        {question.answers.map((x, i) => (
           <MultipleChoiceAnswerButton
             key={`${currentNumber}-${x.answerId}`}
             answer={x}
+            answerNumber={i + 1}
             isAnswered={!!answer}
           />
         ))}
