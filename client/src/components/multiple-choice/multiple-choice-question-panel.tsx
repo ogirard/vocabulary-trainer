@@ -7,6 +7,7 @@ import {
   MultipleChoiceQuestion,
 } from "./multiple-choice-model";
 import MultipleChoiceAnswerButton from "./multiple-choice-answer-button";
+import WaitSpinner from "../wait-spinner";
 
 interface MultipleChoiceQuestionPanelProps {
   question: MultipleChoiceQuestion;
@@ -27,8 +28,8 @@ const MultipleChoiceQuestionPanel = ({
   MultipleChoiceAnswerClickedEvent.subscribe((e) => setAnswer(e.answer));
   NextMultipleChoiceQuestionLoadedEvent.subscribe((e) => setAnswer(null));
 
-  if(!question?.answers) {
-    return <div>NULLLLLLL</div>
+  if (!question?.answers) {
+    return <WaitSpinner />;
   }
 
   return (

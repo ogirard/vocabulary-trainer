@@ -18,23 +18,21 @@ function getMultipleChoiceQuestions(
   unitData: UnitData
 ): MultipleChoiceQuestion[] {
   const multipleChoiceQuestions: MultipleChoiceQuestion[] = [];
-  let questionId = 0;
   for (const translation of unitData.translations) {
     const wrongAnswers = shuffle(
       unitData.translations.filter((x) => x !== translation).slice()
     ).slice(0, 3);
-    questionId++;
     multipleChoiceQuestions.push({
-      questionId: questionId,
+      questionId: translation.id,
       questionText: translation.german,
       answers: shuffle([
         {
-          answerId: `${questionId}-1`,
+          answerId: `${translation.id}-1`,
           answerText: translation.english,
           isCorrect: true,
         },
         ...wrongAnswers.map((x, i) => ({
-          answerId: `${questionId}-${i + 2}`,
+          answerId: `${translation.id}-${i + 2}`,
           answerText: x.english,
           isCorrect: false,
         })),

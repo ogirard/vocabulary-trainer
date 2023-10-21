@@ -1,4 +1,4 @@
-import StartGameButton from "@/components/start-game-button/start-game-button";
+import StartGameButton from "@/components/start-game-button";
 
 export default async function Home() {
   return (
@@ -16,6 +16,7 @@ export default async function Home() {
         <StartGameButton gameName="English Unit 3" gameRoute="voci/3" />
         <StartGameButton gameName="English Unit 4" gameRoute="voci/4" />
         <StartGameButton gameName="English Unit 5" gameRoute="voci/5" />
+        <StartGameButton gameName="1 x 1" gameRoute="math" />
       </div>
       <div className="text-sm text-gray-400 text-center">
         <div className="text-lg text-blue-900 inline-block uppercase font-serif">
