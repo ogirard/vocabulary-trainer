@@ -24,7 +24,7 @@ interface MultipleChoiceQuizProps {
 const MultipleChoiceQuiz = ({
   multipleChoiceQuestions: multipleChoiceQuestions,
 }: MultipleChoiceQuizProps) => {
-  const [currentIndex, setCurrentIndex] = useState(-1);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(
     {} as MultipleChoiceQuestion
@@ -37,12 +37,13 @@ const MultipleChoiceQuiz = ({
 
   const loadNextQuestion = () => {
     setCurrentIndex(currentIndex + 1);
-
     if (currentIndex >= multipleChoiceQuestions.length) {
       setIsFinished(true);
       return;
     }
     setCurrentQuestion(multipleChoiceQuestions[currentIndex]);
+    console.log(currentIndex);
+    console.log(JSON.stringify(currentQuestion));
     NextMultipleChoiceQuestionLoadedEvent.publish(currentQuestion);
   };
 

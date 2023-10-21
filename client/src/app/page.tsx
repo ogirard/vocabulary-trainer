@@ -1,5 +1,3 @@
-import { shuffle } from "lodash";
-import RandomTranslationQuiz from "./random-translation-quiz";
 import StartGameButton from "@/components/start-game-button/start-game-button";
 
 export default async function Home() {

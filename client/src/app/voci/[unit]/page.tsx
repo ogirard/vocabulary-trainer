@@ -23,7 +23,7 @@ function getMultipleChoiceQuestions(
     const wrongAnswers = shuffle(
       unitData.translations.filter((x) => x !== translation).slice()
     ).slice(0, 3);
-
+    questionId++;
     multipleChoiceQuestions.push({
       questionId: questionId,
       questionText: translation.german,

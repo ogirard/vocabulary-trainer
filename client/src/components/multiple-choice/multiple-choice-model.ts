@@ -1,3 +1,4 @@
+import { addGlobalEventListener, configureDocumentIfLoaded, dispatchGlobalEvent, isBrowser } from "../util";
 
 
 export interface MultipleChoiceQuestion {
@@ -20,14 +21,14 @@ export class MultipleChoiceAnswerClickedEvent {
     }
 
     public static publish(answer: MultipleChoiceAnswer) {
-        document.dispatchEvent(
+        dispatchGlobalEvent(
             new CustomEvent(MultipleChoiceAnswerClickedEvent.EVENT_NAME, {
                 detail: new MultipleChoiceAnswerClickedEvent(answer),
             }));
     }
 
     public static subscribe(eventHandler: (event: MultipleChoiceAnswerClickedEvent) => void) {
-        document.addEventListener(MultipleChoiceAnswerClickedEvent.EVENT_NAME, x => {
+        addGlobalEventListener(MultipleChoiceAnswerClickedEvent.EVENT_NAME, x => {
             const event = x as CustomEvent<MultipleChoiceAnswerClickedEvent>;
             eventHandler(event.detail);
         });
@@ -42,14 +43,13 @@ export class NextMultipleChoiceQuestionLoadedEvent {
     }
 
     public static publish(question: MultipleChoiceQuestion) {
-        document.dispatchEvent(
-            new CustomEvent(NextMultipleChoiceQuestionLoadedEvent.EVENT_NAME, {
-                detail: new NextMultipleChoiceQuestionLoadedEvent(question),
-            }));
+        dispatchGlobalEvent(new CustomEvent(NextMultipleChoiceQuestionLoadedEvent.EVENT_NAME, {
+            detail: new NextMultipleChoiceQuestionLoadedEvent(question),
+        }));
     }
 
     public static subscribe(eventHandler: (event: NextMultipleChoiceQuestionLoadedEvent) => void) {
-        document.addEventListener(NextMultipleChoiceQuestionLoadedEvent.EVENT_NAME, x => {
+        addGlobalEventListener(NextMultipleChoiceQuestionLoadedEvent.EVENT_NAME, x => {
             const event = x as CustomEvent<NextMultipleChoiceQuestionLoadedEvent>;
             eventHandler(event.detail);
         });

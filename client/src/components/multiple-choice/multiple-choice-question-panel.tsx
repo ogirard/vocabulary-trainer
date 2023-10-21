@@ -27,6 +27,10 @@ const MultipleChoiceQuestionPanel = ({
   MultipleChoiceAnswerClickedEvent.subscribe((e) => setAnswer(e.answer));
   NextMultipleChoiceQuestionLoadedEvent.subscribe((e) => setAnswer(null));
 
+  if(!question?.answers) {
+    return <div>NULLLLLLL</div>
+  }
+
   return (
     <>
       <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
@@ -35,7 +39,7 @@ const MultipleChoiceQuestionPanel = ({
           style={{ width: `${(currentNumber * 100) / totalNumber}%` }}
         ></div>
         <span className="text-sm text-gray-500">
-          {currentNumber + 1}/{totalNumber}
+          {currentNumber}/{totalNumber}
         </span>
       </div>
       <div className="font-bold text-3xl text-center">
