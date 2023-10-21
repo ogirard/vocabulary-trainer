@@ -57,7 +57,10 @@ export default async function VociPage({
 
   return (
     <>
-      <Link className="absolute left-5 top-5 text-blue-200" href="/">
+      <Link
+        className="absolute left-5 top-5 dark:text-blue-200 text-blue-600"
+        href="/"
+      >
         ❮ Zrügg zur Startsiitä
       </Link>
       <main className="flex min-h-screen flex-col items-center justify-between p-24">
