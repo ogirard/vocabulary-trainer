@@ -337,6 +337,8 @@ ASALocalRun/
 
 NuGet\.config\.bac
 
+out/
+client/.next
 test/results/
 .ps/Chabis.Module.PSModule*
 appsettings.user.json

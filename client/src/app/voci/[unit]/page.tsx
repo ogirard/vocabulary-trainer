@@ -5,7 +5,8 @@ import { shuffle } from 'lodash';
 import Link from 'next/link';
 
 async function getData(unitId: number): Promise<UnitData> {
-  const res = await fetch('http://localhost:5112/TranslationUnit/' + unitId);
+  const apiUrl = process.env.VOCI_API_URL ?? 'http://localhost:5112';
+  const res = await fetch(`${apiUrl}/TranslationUnit/${unitId}`);
 
   if (!res.ok) {
     throw new Error(`Could not fetch translation unit with ID ${unitId}!`);
