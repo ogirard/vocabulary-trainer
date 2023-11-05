@@ -53,3 +53,25 @@ export class NextQuestionAnswerLoadedEvent {
     });
   }
 }
+export class QuestionAnswerFinishedEvent {
+  public static EVENT_NAME = 'onQuestionAnswerFinished';
+
+  constructor() {}
+
+  public static publish() {
+    dispatchGlobalEvent(
+      new CustomEvent(QuestionAnswerFinishedEvent.EVENT_NAME, {
+        detail: new QuestionAnswerFinishedEvent(),
+      })
+    );
+  }
+
+  public static subscribe(
+    eventHandler: (event: QuestionAnswerFinishedEvent) => void
+  ) {
+    addGlobalEventListener(QuestionAnswerFinishedEvent.EVENT_NAME, (x) => {
+      const event = x as CustomEvent<QuestionAnswerFinishedEvent>;
+      eventHandler(event.detail);
+    });
+  }
+}

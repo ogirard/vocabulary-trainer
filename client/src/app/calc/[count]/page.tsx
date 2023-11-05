@@ -1,21 +1,28 @@
+'use client';
+
 import { QuestionAnswer } from '@/components/question-answer/question-answer-model';
 import { shuffle } from 'lodash';
 import Link from 'next/link';
 import MathQuestionAnswerQuiz from './math-question-answer-quiz';
+import { useSearchParams } from 'next/navigation';
 
-function getRandom(exclude: number[], max = 20) {
-  let result = Math.floor(Math.random() * max) + 1;
+function getRandom(exclude: number[], from = 1, to = 20) {
+  let result = Math.floor(Math.random() * (to - from - 1)) + from;
   while (exclude.includes(result)) {
-    result = Math.floor(Math.random() * max) + 1;
+    result = Math.floor(Math.random() * (to - from - 1)) + from;
   }
   return result;
 }
 
-function generateMultiplications(count: number): QuestionAnswer[] {
+function generateMultiplications(
+  count: number,
+  inclFrom: number,
+  inclTo: number
+): QuestionAnswer[] {
   const questions: QuestionAnswer[] = [];
   for (let i = 0; i < count; i++) {
-    const a = (i % 20) + 1;
-    const b = getRandom([]);
+    const a = (i % (inclTo - inclFrom - 1)) + 1;
+    const b = getRandom([], inclFrom, inclTo);
 
     const question: QuestionAnswer = {
       questionId: `question-${i}`,
@@ -36,8 +43,11 @@ export default function MathQuestionAnswerPage({
 }: {
   params: { count: string };
 }) {
+  const searchParams = useSearchParams();
+  const inclFrom = parseInt(searchParams.get('from') || '1');
+  const inclTo = parseInt(searchParams.get('to') || '20');
   const count = parseInt(params.count);
-  const questions = shuffle(generateMultiplications(count));
+  const questions = shuffle(generateMultiplications(count, inclFrom, inclTo));
 
   return (
     <>

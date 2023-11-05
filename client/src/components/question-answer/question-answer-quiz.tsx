@@ -6,10 +6,12 @@ import {
   QuestionAnswer,
   NextQuestionAnswerLoadedEvent,
   QuestionAnswerEnteredEvent,
+  QuestionAnswerFinishedEvent,
 } from './question-answer-model';
 import { useHotkey } from '@/hooks/useHotkey';
 import QuestionAnswerResults from './question-answer-results';
 import QuestionAnswerPanel from './question-answer-panel';
+import Timer from '../timer';
 
 interface QuestionAnswerQuizProps {
   questions: QuestionAnswer[];
@@ -20,7 +22,6 @@ const QuestionAnswerQuiz = ({
   questions,
   evaluateAnswer,
 }: QuestionAnswerQuizProps) => {
-  const panelRef = useRef<HTMLDivElement>();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState({} as QuestionAnswer);
@@ -34,6 +35,7 @@ const QuestionAnswerQuiz = ({
     setCurrentIndex(currentIndex + 1);
     if (currentIndex >= questions.length) {
       setIsFinished(true);
+      QuestionAnswerFinishedEvent.publish();
       return;
     }
     setCurrentQuestion(questions[currentIndex]);
@@ -64,7 +66,7 @@ const QuestionAnswerQuiz = ({
     <>
       {!isFinished && (
         <>
-          <QuestionAnswerPanel            
+          <QuestionAnswerPanel
             question={currentQuestion}
             currentNumber={currentIndex}
             totalNumber={questions.length}
