@@ -27,6 +27,8 @@ export default async function Home() {
         <StartGameButton gameName='English Unit 5' gameRoute='voci/5' />
         <StartGameButton gameName='1 x 1 (100)' gameRoute='math/100' />
         <StartGameButton gameName='1 x 1 (ganz vieli)' gameRoute='math/9999' />
+        <StartGameButton gameName='1 x 1 mit igäh (100)' gameRoute='calc/100' />
+        <StartGameButton gameName='1 x 1 mit igäh (ganz vieli)' gameRoute='calc/9999' />
       </div>
       <div className='text-center text-sm text-gray-400'>
         <div className='inline-block font-serif text-lg uppercase text-blue-900'>

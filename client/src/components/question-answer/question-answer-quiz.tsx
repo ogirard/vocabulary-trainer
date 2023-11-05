@@ -1,35 +1,29 @@
 'use client';
 
-import MultipleChoiceQuestionPanel from './multiple-choice-question-panel';
-import MultipleChoiceResults from './multiple-choice-results';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import {
-  MultipleChoiceAnswerClickedEvent,
-  MultipleChoiceQuestion,
-  NextMultipleChoiceQuestionLoadedEvent,
-} from './multiple-choice-model';
+  QuestionAnswer,
+  NextQuestionAnswerLoadedEvent,
+  QuestionAnswerEnteredEvent,
+} from './question-answer-model';
 import { useHotkey } from '@/hooks/useHotkey';
+import QuestionAnswerResults from './question-answer-results';
+import QuestionAnswerPanel from './question-answer-panel';
 
-export interface MathMultiplyQuestion {
-  id: number;
-  factor1: number;
-  factor2: number;
-  answer: number;
+interface QuestionAnswerQuizProps {
+  questions: QuestionAnswer[];
+  evaluateAnswer: (answer: string, current: QuestionAnswer) => boolean;
 }
 
-interface MultipleChoiceQuizProps {
-  multipleChoiceQuestions: MultipleChoiceQuestion[];
-}
-
-const MultipleChoiceQuiz = ({
-  multipleChoiceQuestions: multipleChoiceQuestions,
-}: MultipleChoiceQuizProps) => {
+const QuestionAnswerQuiz = ({
+  questions,
+  evaluateAnswer,
+}: QuestionAnswerQuizProps) => {
+  const panelRef = useRef<HTMLDivElement>();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
-  const [currentQuestion, setCurrentQuestion] = useState(
-    {} as MultipleChoiceQuestion
-  );
+  const [currentQuestion, setCurrentQuestion] = useState({} as QuestionAnswer);
 
   const [answerStats, setAnswerStats] = useState({
     correctCount: 0,
@@ -38,19 +32,19 @@ const MultipleChoiceQuiz = ({
 
   const loadNextQuestion = () => {
     setCurrentIndex(currentIndex + 1);
-    if (currentIndex >= multipleChoiceQuestions.length) {
+    if (currentIndex >= questions.length) {
       setIsFinished(true);
       return;
     }
-    setCurrentQuestion(multipleChoiceQuestions[currentIndex]);
-    NextMultipleChoiceQuestionLoadedEvent.publish(currentQuestion);
+    setCurrentQuestion(questions[currentIndex]);
+    NextQuestionAnswerLoadedEvent.publish(currentQuestion);
   };
 
   useEffect(() => {
     loadNextQuestion();
   }, []);
 
-  MultipleChoiceAnswerClickedEvent.subscribe((e) => {
+  QuestionAnswerEnteredEvent.subscribe((e) => {
     const stats = { ...answerStats };
     if (e.answer.isCorrect) {
       stats.correctCount = (stats.correctCount || 0) + 1;
@@ -70,11 +64,12 @@ const MultipleChoiceQuiz = ({
     <>
       {!isFinished && (
         <>
-          <MultipleChoiceQuestionPanel
+          <QuestionAnswerPanel            
             question={currentQuestion}
             currentNumber={currentIndex}
-            totalNumber={multipleChoiceQuestions.length}
-          ></MultipleChoiceQuestionPanel>
+            totalNumber={questions.length}
+            evaluateAnswer={evaluateAnswer}
+          ></QuestionAnswerPanel>
 
           <button
             className='min-w-full rounded-lg bg-blue-200 p-8 px-16 font-bold text-blue-900'
@@ -85,18 +80,18 @@ const MultipleChoiceQuiz = ({
         </>
       )}
       {isFinished && (
-        <MultipleChoiceResults
+        <QuestionAnswerResults
           wrongAnswerCount={answerStats.wrongCount}
           correctAnswerCount={answerStats.correctCount}
           noAnswerCount={
-            multipleChoiceQuestions.length -
+            questions.length -
             (answerStats?.correctCount ?? 0) -
             (answerStats?.wrongCount ?? 0)
           }
-        ></MultipleChoiceResults>
+        ></QuestionAnswerResults>
       )}
     </>
   );
 };
 
-export default MultipleChoiceQuiz;
+export default QuestionAnswerQuiz;

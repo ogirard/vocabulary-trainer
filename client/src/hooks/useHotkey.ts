@@ -1,6 +1,10 @@
 import { useEffect } from 'react';
 
-export const useHotkey = (keys: string[], onTrigger: () => void) => {
+export const useHotkey = (
+  keys: string[],
+  onTrigger: () => boolean,
+  element?: HTMLElement
+) => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
 
@@ -8,14 +12,25 @@ export const useHotkey = (keys: string[], onTrigger: () => void) => {
 
     const handleTriggerKey = (event: KeyboardEvent) => {
       if (normalizedKeys.includes(event.code.toLowerCase())) {
-        onTrigger();
+        if (onTrigger()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
       }
     };
 
-    document.addEventListener('keydown', handleTriggerKey);
+    if (element) {
+      element.addEventListener('keydown', handleTriggerKey);
+    } else {
+      document.addEventListener('keydown', handleTriggerKey);
+    }
 
     return () => {
-      document.removeEventListener('keydown', handleTriggerKey);
+      if (element) {
+        element.removeEventListener('keydown', handleTriggerKey);
+      } else {
+        document.removeEventListener('keydown', handleTriggerKey);
+      }
     };
   }, [keys, onTrigger]);
 };

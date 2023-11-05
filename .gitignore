@@ -342,3 +342,5 @@ client/.next
 test/results/
 .ps/Chabis.Module.PSModule*
 appsettings.user.json
+voci-client_latest.tar
+voci-api_latest.tar

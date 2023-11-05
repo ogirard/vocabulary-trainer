@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY . ./
 RUN dotnet restore
-RUN dotnet publish -c Release -o out
+RUN dotnet publish -c Release -o out -r linux-x64
 
 
 FROM mcr.microsoft.com/dotnet/aspnet:7.0
