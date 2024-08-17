@@ -1,3 +1,4 @@
+using System.Text;
 using Microsoft.AspNetCore.Mvc;
 
 namespace VocabularyTrainer.Api.Translations;
@@ -36,5 +37,26 @@ public class TranslationUnitController : ControllerBase
         }
 
         return Ok(units.Select(x => new TranslationUnitInfo(x.Id, x.Name)).ToArray());
+    }
+
+    [HttpPost("/TranslationUnit/DumpCsv", Name = "Dump Translations as CSV")]
+    public async Task<IActionResult> GetAllAsCsvAsync(CancellationToken cancellationToken)
+    {
+        var units = new List<string>();
+        foreach (var unitDataPath in Directory.GetFiles(@"data\", "*.json"))
+        {
+            var id = int.Parse(Path.GetFileNameWithoutExtension(unitDataPath).Substring("unit".Length));
+            var unit = await TranslationUnit.LoadAsync(id, unitDataPath, cancellationToken);
+            var csvPath = unitDataPath.Replace(".json", ".csv");
+            await System.IO.File.WriteAllTextAsync(csvPath, Encoding.UTF8.GetString(Encoding.UTF8.GetPreamble()) +
+                                                            "English;German" + Environment.NewLine + string.Join(
+                                                                Environment.NewLine,
+                                                                unit.Translations.Select(t =>
+                                                                    $"{t.English};{t.German}")), Encoding.UTF8,
+                cancellationToken);
+            units.Add($"Dumped {unit.Name} to {csvPath}");
+        }
+
+        return Ok(new { Units = units });
     }
 }
