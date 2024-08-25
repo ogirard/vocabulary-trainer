@@ -1,0 +1,196 @@
+{
+  "Id": 10,
+  "Name": "Grade 5 - Unit 5",
+  "Translations": [
+    {
+      "Id": 1,
+      "German": "Sporttag, Sportfest",
+      "English": "sports day"
+    },
+    {
+      "Id": 2,
+      "German": "ein Spiel spielen",
+      "English": "play a game"
+    },
+    {
+      "Id": 3,
+      "German": "sprinten",
+      "English": "sprint"
+    },
+    {
+      "Id": 4,
+      "German": "joggen",
+      "English": "jog"
+    },
+    {
+      "Id": 5,
+      "German": "springen; Sprung",
+      "English": "jump"
+    },
+    {
+      "Id": 6,
+      "German": "(mit dem Fuss) treten",
+      "English": "kick"
+    },
+    {
+      "Id": 7,
+      "German": "fangen",
+      "English": "catch"
+    },
+    {
+      "Id": 8,
+      "German": "(sich) bewegen, ziehen (auf Spielbrett)",
+      "English": "move"
+    },
+    {
+      "Id": 9,
+      "German": "klettern",
+      "English": "climb"
+    },
+    {
+      "Id": 10,
+      "German": "ein Risiko eingehen",
+      "English": "take a risk"
+    },
+    {
+      "Id": 11,
+      "German": "üben",
+      "English": "practise"
+    },
+    {
+      "Id": 12,
+      "German": "Staffellauf",
+      "English": "relay race"
+    },
+    {
+      "Id": 13,
+      "German": "Wettbewerb",
+      "English": "competition"
+    },
+    {
+      "Id": 14,
+      "German": "feiern",
+      "English": "celebrate"
+    },
+    {
+      "Id": 15,
+      "German": "sich entspannen",
+      "English": "relax"
+    },
+    {
+      "Id": 16,
+      "German": "Innen-, Hallen-",
+      "English": "indoor"
+    },
+    {
+      "Id": 17,
+      "German": "(sich) fühlen, spüren",
+      "English": "feel (past: felt)"
+    },
+    {
+      "Id": 18,
+      "German": "sagen",
+      "English": "say (past: said)"
+    },
+    {
+      "Id": 19,
+      "German": "verlieren",
+      "English": "lose (past: lost)"
+    },
+    {
+      "Id": 20,
+      "German": "rennen",
+      "English": "run (past: ran)"
+    },
+    {
+      "Id": 21,
+      "German": "fallen",
+      "English": "fall (past: fell)"
+    },
+    {
+      "Id": 22,
+      "German": "sehen",
+      "English": "see (past: saw)"
+    },
+    {
+      "Id": 23,
+      "German": "vergessen",
+      "English": "forget (past: forgot)"
+    },
+    {
+      "Id": 24,
+      "German": "gewinnen",
+      "English": "win (past: won)"
+    },
+    {
+      "Id": 25,
+      "German": "throw (past: threw)",
+      "English": "werfen"
+    },
+    {
+      "Id": 26,
+      "German": "machen",
+      "English": "make (past: made)"
+    },
+    {
+      "Id": 27,
+      "German": "tun",
+      "English": "do (past: did)"
+    },
+    {
+      "Id": 28,
+      "German": "gehen",
+      "English": "go (past: went)"
+    },
+    {
+      "Id": 29,
+      "German": "sein",
+      "English": "be (past: was/were)"
+    },
+    {
+      "Id": 30,
+      "German": "haben",
+      "English": "have (past: had)"
+    },
+    {
+      "Id": 31,
+      "German": "Wettervorhersage",
+      "English": "weather forecast"
+    },
+    {
+      "Id": 32,
+      "German": "Das Wetter war ...",
+      "English": "The weather was ..."
+    },
+    {
+      "Id": 33,
+      "German": "Gewitter",
+      "English": "thunderstorm"
+    },
+    {
+      "Id": 34,
+      "German": "erste, -r, -s",
+      "English": "first"
+    },
+    {
+      "Id": 35,
+      "German": "zweite, -r, -s",
+      "English": "second"
+    },
+    {
+      "Id": 36,
+      "German": "dritte, -r, -s",
+      "English": "third"
+    },
+    {
+      "Id": 37,
+      "German": "vierte, -r, -s",
+      "English": "fourth"
+    },
+    {
+      "Id": 38,
+      "German": "Pferderennen",
+      "English": "horse race"
+    }
+  ]
+}

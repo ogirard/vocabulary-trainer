@@ -1,0 +1,186 @@
+{
+  "Id": 7,
+  "Name": "Grade 5 - Unit 2",
+  "Translations": [
+    {
+      "Id": 1,
+      "German": "bester Freund, beste Freundin",
+      "English": "best friend"
+    },
+    {
+      "Id": 2,
+      "German": "verrückt",
+      "English": "crazy"
+    },
+    {
+      "Id": 3,
+      "German": "ein guter Zuhörer, eine gute Zuhörerin",
+      "English": "a good listener"
+    },
+    {
+      "Id": 4,
+      "German": "abenteuerlustig, abenteuerlich",
+      "English": "adventurous"
+    },
+    {
+      "Id": 5,
+      "German": "arrogant, anmassend",
+      "English": "arrogant"
+    },
+    {
+      "Id": 6,
+      "German": "langweilig",
+      "English": "boring"
+    },
+    {
+      "Id": 7,
+      "German": "tapfer, mutig",
+      "English": "brave"
+    },
+    {
+      "Id": 8,
+      "German": "cool, getassen",
+      "English": "cool"
+    },
+    {
+      "Id": 9,
+      "German": "kooperativ, hilfsbereit",
+      "English": "cooperative"
+    },
+    {
+      "Id": 10,
+      "German": "freundlich",
+      "English": "friendly"
+    },
+    {
+      "Id": 11,
+      "German": "lustig, witzig, komisch",
+      "English": "funny"
+    },
+    {
+      "Id": 12,
+      "German": "grosszügig",
+      "English": "generous"
+    },
+    {
+      "Id": 13,
+      "German": "hilfsbereit, hilfreich",
+      "English": "helpful"
+    },
+    {
+      "Id": 14,
+      "German": "geduldig",
+      "English": "patient"
+    },
+    {
+      "Id": 15,
+      "German": "ungeduldig",
+      "English": "impatient"
+    },
+    {
+      "Id": 16,
+      "German": "faul, träge",
+      "English": "lazy"
+    },
+    {
+      "Id": 17,
+      "German": "optimistisch",
+      "English": "optimistic"
+    },
+    {
+      "Id": 18,
+      "German": "aufbrausend, hitzköpfig",
+      "English": "quick-tempered"
+    },
+    {
+      "Id": 19,
+      "German": "ernst, schwer",
+      "English": "serious"
+    },
+    {
+      "Id": 20,
+      "German": "glücklich",
+      "English": "happy"
+    },
+    {
+      "Id": 21,
+      "German": "verärgert, wütend",
+      "English": "angry"
+    },
+    {
+      "Id": 22,
+      "German": "verängstigt",
+      "English": "afraid"
+    },
+    {
+      "Id": 23,
+      "German": "lächelnd",
+      "English": "smiling"
+    },
+    {
+      "Id": 24,
+      "German": "grinsend",
+      "English": "grinning"
+    },
+    {
+      "Id": 25,
+      "German": "müde",
+      "English": "tired"
+    },
+    {
+      "Id": 26,
+      "German": "gefährliche Reise/Fahrt",
+      "English": "dangerous trip"
+    },
+    {
+      "Id": 27,
+      "German": "sicheres (ungefährliches) Abenteuer/Erlebnis",
+      "English": "safe adventure"
+    },
+    {
+      "Id": 28,
+      "German": "Emotion, Gefühl",
+      "English": "emotion"
+    },
+    {
+      "Id": 29,
+      "German": "Ich bin sicher, dass er ... ist.",
+      "English": "I'm sure he's ..."
+    },
+    {
+      "Id": 30,
+      "German": "Ich denke/glaube, dass sie nicht ... ist.",
+      "English": "I think she isn't ..."
+    },
+    {
+      "Id": 31,
+      "German": "Vielleicht ist er ...",
+      "English": "Perhaps he is ..."
+    },
+    {
+      "Id": 32,
+      "German": "Für mich sieht sie ... aus.",
+      "English": "To me she looks ..."
+    },
+    {
+      "Id": 33,
+      "German": "Die Hauptfigur ...",
+      "English": "The main character ..."
+    },
+    {
+      "Id": 34,
+      "German": "Er hat ...",
+      "English": "He's got ..."
+    },
+    {
+      "Id": 35,
+      "German": "Wir können ...",
+      "English": "We can ..."
+    },
+    {
+      "Id": 36,
+      "German": "We've got ...",
+      "English": "Wir haben ..."
+    }
+  ]
+}

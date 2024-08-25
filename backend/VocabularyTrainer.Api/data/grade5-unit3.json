@@ -1,0 +1,191 @@
+{
+  "Id": 8,
+  "Name": "Grade 5 - Unit 3",
+  "Translations": [
+    {
+      "Id": 1,
+      "German": "Unfall",
+      "English": "accident"
+    },
+    {
+      "Id": 2,
+      "German": "verletzt",
+      "English": "injured"
+    },
+    {
+      "Id": 3,
+      "German": "Verletzung",
+      "English": "injury"
+    },
+    {
+      "Id": 4,
+      "German": "wehtun, schmerzen",
+      "English": "hurt (past: hurt)"
+    },
+    {
+      "Id": 5,
+      "German": "Blut",
+      "English": "blood"
+    },
+    {
+      "Id": 6,
+      "German": "gefährlich",
+      "English": "dangerous"
+    },
+    {
+      "Id": 7,
+      "German": "bewusstlos",
+      "English": "unconscious"
+    },
+    {
+      "Id": 8,
+      "German": "auf dem Boden liegend",
+      "English": "lying on the ground"
+    },
+    {
+      "Id": 9,
+      "German": "Krankenwagen",
+      "English": "ambulance"
+    },
+    {
+      "Id": 10,
+      "German": "Notrufzentrale",
+      "English": "emergency centre"
+    },
+    {
+      "Id": 11,
+      "German": "Telefonnummer",
+      "English": "phone number"
+    },
+    {
+      "Id": 12,
+      "German": "(Telefon-)Anruf",
+      "English": "phone call"
+    },
+    {
+      "Id": 13,
+      "German": "Notruf",
+      "English": "emergency call"
+    },
+    {
+      "Id": 14,
+      "German": "Handy, Natel",
+      "English": "mobile"
+    },
+    {
+      "Id": 15,
+      "German": "Sicherheit",
+      "English": "safety"
+    },
+    {
+      "Id": 16,
+      "German": "Erwachsene/-r",
+      "English": "adult"
+    },
+    {
+      "Id": 17,
+      "German": "helfen; Hilfe",
+      "English": "help"
+    },
+    {
+      "Id": 18,
+      "German": "erste Hilfe",
+      "English": "first aid"
+    },
+    {
+      "Id": 19,
+      "German": "Velofahrer/-in",
+      "English": "cyclist"
+    },
+    {
+      "Id": 20,
+      "German": "Pannendreieck, Warndreieck",
+      "English": "breakdown triangle"
+    },
+    {
+      "Id": 21,
+      "German": "Bleib ruhig.",
+      "English": "Stay calm."
+    },
+    {
+      "Id": 22,
+      "German": "Ruf sofort an.",
+      "English": "Call immediately."
+    },
+    {
+      "Id": 23,
+      "German": "Wer bist du? / Wer sind Sie?",
+      "English": "Who are you?"
+    },
+    {
+      "Id": 24,
+      "German": "Was ist passiert?",
+      "English": "What happened?"
+    },
+    {
+      "Id": 25,
+      "German": "Wann ist es passiert?",
+      "English": "When did it happen?"
+    },
+    {
+      "Id": 26,
+      "German": "Wo bist du? / Wo Sind Sie?",
+      "English": "Where are you?"
+    },
+    {
+      "Id": 27,
+      "German": "Wie viele Personen sind verletzt?",
+      "English": "How many people are hurt?"
+    },
+    {
+      "Id": 28,
+      "German": "Bist du ...? / Sind Sie ...?",
+      "English": "Are you ...?"
+    },
+    {
+      "Id": 29,
+      "German": "Geh nicht ...",
+      "English": "Don't go ..."
+    },
+    {
+      "Id": 30,
+      "German": "Fahr mit dem Velo nicht ...",
+      "English": "Don't cycle ..."
+    },
+    {
+      "Id": 31,
+      "German": "Blockiere nicht ...",
+      "English": "Don't block ..."
+    },
+    {
+      "Id": 32,
+      "German": "Wenn jemand blutet / keine Luft bekommt ...",
+      "English": "If someone is bleeding/choking ..."
+    },
+    {
+      "Id": 33,
+      "German": "Wenn jemand eine Verbrennung hat ...",
+      "English": "If someone has a burn ..."
+    },
+    {
+      "Id": 34,
+      "German": "Du musst ...",
+      "English": "You have to ..."
+    },
+    {
+      "Id": 35,
+      "German": "Du solltest / solltest nicht ...",
+      "English": "You should/shouldn't ..."
+    },
+    {
+      "Id": 36,
+      "German": "Es ist besser, ... zu ...",
+      "English": "It's better to ..."
+    },
+    {
+      "Id": 37,
+      "German": "Sicherheit geht vor",
+      "English": "safety first"
+    }
+  ]
+}

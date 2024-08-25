@@ -1,0 +1,191 @@
+{
+  "Id": 6,
+  "Name": "Grade 5 - Unit 1",
+  "Translations": [
+    {
+      "Id": 1,
+      "German": "Schüler/-in",
+      "English": "pupil"
+    },
+    {
+      "Id": 2,
+      "German": "Rektor",
+      "English": "headmaster"
+    },
+    {
+      "Id": 3,
+      "German": "(Schul-)Klasse",
+      "English": "class/grade"
+    },
+    {
+      "Id": 4,
+      "German": "Lehrerzimmer",
+      "English": "teachers' room"
+    },
+    {
+      "Id": 5,
+      "German": "Pausenplatz",
+      "English": "schoolyard"
+    },
+    {
+      "Id": 6,
+      "German": "Turnhalle, Fitnessstudio",
+      "English": "gym"
+    },
+    {
+      "Id": 7,
+      "German": "Umkleideraum",
+      "English": "changing room"
+    },
+    {
+      "Id": 8,
+      "German": "Aussenbahn, Laufbahn im Freien",
+      "English": "outdoor track"
+    },
+    {
+      "Id": 9,
+      "German": "Stundenplan, Fahrplan",
+      "English": "timetable"
+    },
+    {
+      "Id": 10,
+      "German": "Pause",
+      "English": "break/recess"
+    },
+    {
+      "Id": 11,
+      "German": "Kunstclub",
+      "English": "Arts Club"
+    },
+    {
+      "Id": 12,
+      "German": "Chor, Gesangsverein",
+      "English": "choir"
+    },
+    {
+      "Id": 13,
+      "German": "(Schul-)Fach, Thema",
+      "English": "subject"
+    },
+    {
+      "Id": 14,
+      "German": "Turnen, Sport (Schulfach)",
+      "English": "PE (physical education)"
+    },
+    {
+      "Id": 15,
+      "German": "Geschichte",
+      "English": "history"
+    },
+    {
+      "Id": 16,
+      "German": "Mathe",
+      "English": "maths"
+    },
+    {
+      "Id": 17,
+      "German": "(Natur-)Wissenschaft",
+      "English": "science"
+    },
+    {
+      "Id": 18,
+      "German": "Geografie",
+      "English": "geography"
+    },
+    {
+      "Id": 19,
+      "German": "Sozialkunde, Gesellschaftskunde",
+      "English": "social studies (pl.)"
+    },
+    {
+      "Id": 20,
+      "German": "Hemd",
+      "English": "shirt"
+    },
+    {
+      "Id": 21,
+      "German": "Pullover",
+      "English": "jumper"
+    },
+    {
+      "Id": 22,
+      "German": "Hose",
+      "English": "trousers (pl.)"
+    },
+    {
+      "Id": 23,
+      "German": "Rock, Jupe",
+      "English": "skirt"
+    },
+    {
+      "Id": 24,
+      "German": "Krawatte",
+      "English": "tie"
+    },
+    {
+      "Id": 25,
+      "German": "Schuh",
+      "English": "shoe"
+    },
+    {
+      "Id": 26,
+      "German": "ich, mein, -e",
+      "English": "I, my"
+    },
+    {
+      "Id": 27,
+      "German": "du, dein, -e; ihr, euer, eure",
+      "English": "you, your"
+    },
+    {
+      "Id": 28,
+      "German": "er, sein, -e",
+      "English": "he, his"
+    },
+    {
+      "Id": 29,
+      "German": "sie, ihr, -e (Singular)",
+      "English": "she, her"
+    },
+    {
+      "Id": 30,
+      "German": "wir, unser, -e",
+      "English": "we, our"
+    },
+    {
+      "Id": 31,
+      "German": "sie, ihr, -e (Plural)",
+      "English": "they, their"
+    },
+    {
+      "Id": 32,
+      "German": "Wie wäre es mit ...?",
+      "English": "How about ...?"
+    },
+    {
+      "Id": 33,
+      "German": "Das ist eine coole Idee!",
+      "English": "That's a cool idea!"
+    },
+    {
+      "Id": 34,
+      "German": "Das klingt toll/fantastisch.",
+      "English": "That sounds brilliant/fantastic."
+    },
+    {
+      "Id": 35,
+      "German": "Das ist langweilig.",
+      "English": "That's boring."
+    },
+    {
+      "Id": 36,
+      "German": "gegenüber von",
+      "English": "across from"
+    },
+    {
+      "Id": 37,
+      "German": "links/rechts von",
+      "English": "to the left/right of"
+    }
+  ]
+}
